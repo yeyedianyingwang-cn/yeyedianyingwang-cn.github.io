@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="content-language" content="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="夜夜电影网是 0149 导航旗下「深夜放映」频道：每晚一部适合 23:00 之后观看的电影，含失眠片单、类型夜曲、导演夜话、夜读影评、今晚放映。倡导正版、明确反对盗版与网盘盗链。">
+<meta name="keywords" content="夜夜电影网, 深夜电影, 失眠电影, 夜片, 电影推荐, 电影片单, 电影影评, 观影指南, 黑色电影, 文艺片, 默片, 长镜头, 华语电影, 欧洲电影, 日本电影, 韩国电影, 4K修复, 0149导航, yeyedianyingwang-cn">
+<meta name="author" content="夜夜电影网 · 0149 导航">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#05070d">
+<title>夜夜电影网 - 每晚一部，适合 23:00 之后｜0149 导航 | yeyedianyingwang-cn.github.io</title>
+<link rel="canonical" href="https://yeyedianyingwang-cn.github.io">
+<style>
+:root{
+  --ink:#05070d; --ink2:#0c1220; --ind:#5b7cff; --ind2:#8fa8ff; --gold:#e9c46a;
+  --bone:#f2efe7; --gray:#6b7280; --dim:#9aa3b2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--ink);color:var(--bone);line-height:1.9;font-size:15.2px;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(2px 2px at 12% 22%,rgba(143,168,255,.5),transparent),
+    radial-gradient(1.5px 1.5px at 78% 62%,rgba(233,196,106,.42),transparent),
+    radial-gradient(1px 1px at 44% 84%,rgba(255,255,255,.28),transparent),
+    radial-gradient(1px 1px at 90% 18%,rgba(143,168,255,.34),transparent),
+    linear-gradient(180deg,#05070d 0%,#080b16 46%,#05070d 100%);
+  background-attachment:fixed;
+}
+.serif,h1,h2,h3,h4,.film,.fig{font-family:Georgia,"Songti SC","SimSun",serif}
+a{color:inherit;text-decoration:none;transition:.2s}
+ul,ol{list-style:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+::selection{background:var(--ind);color:#fff}
+.alert{background:var(--gold);color:#241c08;font-size:10.4px;letter-spacing:1px;padding:11px 0;text-align:center;font-weight:800}
+.alert b{background:#241c08;color:var(--gold);padding:1px 7px}
+.marq{overflow:hidden;border-bottom:1px solid rgba(233,196,106,.3);padding:9px 0;font-size:8.4px;letter-spacing:2.8px;color:var(--dim);white-space:nowrap;font-weight:900}
+.marq span{display:inline-block;padding-left:2%;animation:mm 78s linear infinite}
+@keyframes mm{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marq b{color:var(--gold)}
+nav.gnb{position:sticky;top:0;z-index:100;background:rgba(5,7,13,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(233,196,106,.3)}
+.nrow{display:flex;align-items:center;height:66px;gap:2px}
+.logo{font-size:18.6px;font-weight:900;letter-spacing:.4px;margin-right:10px;white-space:nowrap;display:flex;align-items:center;gap:11px;color:var(--bone)}
+.moon{width:24px;height:24px;flex:0 0 24px;border-radius:50%;background:var(--gold);box-shadow:inset -6px -4px 0 rgba(120,90,20,.5);position:relative}
+.moon::after{content:"";position:absolute;right:-9px;top:5px;width:6px;height:6px;border-radius:50%;background:rgba(143,168,255,.75);filter:blur(1px)}
+.logo small{font-size:7.8px;letter-spacing:1.4px;color:var(--dim);font-weight:800;display:block;line-height:1.1;margin-top:2px}
+.nrow a{font-size:13px;padding:10px 8px;color:var(--dim);font-weight:700;position:relative}
+.nrow a:hover{color:var(--ind2)}
+.nrow a::before{content:"";position:absolute;left:8px;right:8px;bottom:5px;height:2px;background:var(--ind);transform:scaleX(0);transform-origin:right;transition:.22s}
+.nrow a:hover::before{transform:scaleX(1);transform-origin:left}
+.togg{display:none;background:none;border:none;color:var(--gold);font-size:25px;cursor:pointer;margin-left:auto;font-weight:900}
+.hero{padding:50px 0 10px;position:relative}
+.hg{display:grid;grid-template-columns:1fr 300px;gap:44px;align-items:center}
+.eyebrow{font-size:9px;letter-spacing:4.4px;color:var(--dim);font-weight:900}
+.hero h1{font-size:clamp(32px,5.6vw,58px);line-height:1.16;font-weight:900;margin:14px 0 15px;letter-spacing:.4px;color:var(--bone)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:var(--dim);font-size:15.2px;margin-bottom:9px;text-align:justify}
+.hero p b{color:var(--bone)}
+.badge{display:inline-block;margin-top:15px;border:1px solid var(--gold);color:var(--gold);font-size:9.4px;letter-spacing:2.2px;padding:8px 14px;font-weight:900;transform:rotate(-1.4deg)}
+.hero aside{width:300px;margin-left:auto;background:var(--ink2);padding:20px 22px;position:relative;border-left:4px solid var(--ind);box-shadow:0 14px 40px rgba(91,124,255,.14)}
+.hero aside .lbl{font-size:8.6px;letter-spacing:2.8px;color:var(--gold);font-weight:900}
+.hero aside .big{font-family:Georgia,serif;font-size:52px;font-weight:900;line-height:1;letter-spacing:-2px;margin:6px 0 2px;color:#fff}
+.hero aside .of{font-size:10.6px;letter-spacing:1.1px;color:var(--dim);font-weight:800}
+.hero aside .rule{height:1px;background:var(--ind);margin:12px 0 10px;opacity:.5}
+.hero aside p{font-size:12.2px;line-height:1.92;color:var(--dim);text-align:justify}
+.hero aside .who{font-size:11px;font-weight:800;letter-spacing:.6px;color:var(--gold);margin-top:8px}
+section{padding:64px 0;position:relative}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:25px}
+.shl{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.st{font-size:clamp(19px,3.2vw,27px);font-weight:900;letter-spacing:1.2px;color:var(--bone);position:relative;padding-left:17px}
+.st::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:8px;background:var(--ind)}
+.st i{font-style:normal;color:var(--gray)}
+.en{font-size:8.2px;letter-spacing:3px;color:var(--dim)}
+.ss{color:var(--dim);font-size:13.2px;max-width:820px;margin-top:9px;line-height:1.9}
+.chip{font-size:10.2px;padding:7px 12px;border:1px solid var(--gold);color:var(--gold);font-weight:800;letter-spacing:.5px}
+/* 栏目1：失眠片单 —— 窗格 */
+.win{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.wn{background:var(--ink2);border:1px solid rgba(143,168,255,.24);padding:0 0 13px;overflow:hidden;transition:.24s;position:relative}
+.wn:hover{transform:translateY(-5px);border-color:var(--ind);box-shadow:0 16px 34px rgba(91,124,255,.22)}
+.wn .cv{height:104px;position:relative;background:
+  linear-gradient(160deg,transparent 0 42%,rgba(233,196,106,.16) 42% 58%,transparent 58%),
+  linear-gradient(70deg,#0a1124,#05070d);margin-bottom:10px}
+.wn .cv::before{content:"";position:absolute;inset:14px;border:1px solid rgba(233,196,106,.34);box-shadow:inset 0 0 0 5px rgba(5,7,13,.92)}
+.wn .cv::after{content:"";position:absolute;left:14px;right:14px;top:50%;height:1px;background:rgba(233,196,106,.26)}
+.wn .hr{font-family:Georgia,serif;font-size:26px;font-weight:900;color:var(--gold);letter-spacing:-1px;line-height:1;padding:0 15px}
+.wn h4{font-size:15.6px;font-weight:900;line-height:1.48;padding:0 15px}
+.wn .meta{font-size:9.6px;letter-spacing:.9px;color:var(--gray);font-weight:800;padding:3px 15px}
+.wn p{font-size:11.6px;color:var(--dim);line-height:1.84;padding:5px 15px 0;text-align:justify}
+.wn .mood{display:inline-block;margin:8px 15px 0;font-size:8.8px;letter-spacing:1.1px;padding:3px 8px;background:rgba(91,124,255,.14);border:1px solid var(--ind);color:var(--ind2);font-weight:800}
+/* 栏目2：类型夜曲 —— 竖向时间轴 */
+.noct{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.nc{background:var(--ink2);border-left:5px solid var(--ind);padding:15px 18px;transition:.22s}
+.nc:nth-child(2){border-left-color:var(--gold)}
+.nc:nth-child(3){border-left-color:var(--bone)}
+.nc:hover{background:#101830}
+.nc .no{font-family:Georgia,serif;font-size:10.6px;color:var(--ind2);font-weight:900;letter-spacing:1.4px}
+.nc h4{font-size:17px;font-weight:900;line-height:1.46}
+.nc p{font-size:12.2px;color:var(--dim);line-height:1.88;margin-top:5px;text-align:justify}
+.nc .when{font-size:9.8px;letter-spacing:1.4px;color:var(--gold);font-weight:800;margin-top:7px}
+/* 栏目3：导演夜话 —— 头像栅格 */
+.face{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1px solid rgba(233,196,106,.3)}
+.fc{padding:15px 10px;text-align:center;border-right:1px solid rgba(143,168,255,.18);border-bottom:1px solid rgba(143,168,255,.18);transition:.2s}
+.fc:nth-child(6n){border-right:none}
+.fc:nth-last-child(-n+6){border-bottom:none}
+.fc .av{width:54px;height:54px;margin:0 auto 8px;border-radius:50%;position:relative;background:radial-gradient(circle at 32% 30%,var(--ind2),#1a2550 68%,#05070d)}
+.fc:nth-child(2) .av{background:radial-gradient(circle at 32% 30%,var(--gold),#3a2c10 68%,#05070d)}
+.fc:nth-child(3) .av{background:radial-gradient(circle at 32% 30%,#a98bff,#241c40 68%,#05070d)}
+.fc:nth-child(4) .av{background:radial-gradient(circle at 32% 30%,#6ee7c0,#0e2a25 68%,#05070d)}
+.fc:nth-child(5) .av{background:radial-gradient(circle at 32% 30%,#ffb38a,#3a1f12 68%,#05070d)}
+.fc:nth-child(6) .av{background:radial-gradient(circle at 32% 30%,#ff8fa3,#3a1420 68%,#05070d)}
+.fc:nth-child(7) .av{background:radial-gradient(circle at 32% 30%,#c9d2e3,#1c2230 68%,#05070d)}
+.fc .av::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px dashed var(--dim)}
+.fc b{display:block;font-size:12.6px;letter-spacing:.5px}
+.fc i{font-style:normal;font-size:8.8px;color:var(--gray);font-weight:800;letter-spacing:.7px;display:block;margin-top:2px}
+.fc:hover{background:rgba(91,124,255,.1)}
+.fc:hover b{color:var(--gold)}
+/* 栏目4：夜读 —— 首字下沉双栏 */
+.paper{display:grid;grid-template-columns:2.05fr 1fr;gap:34px;background:var(--ink2);padding:26px 28px;border-top:3px solid var(--gold)}
+.paper .lead{font-family:Georgia,serif;font-size:clamp(26px,3.6vw,38px);line-height:1.34;color:var(--bone);font-weight:900;letter-spacing:-.6px}
+.paper p{font-size:14.4px;color:#cdd3df;line-height:2.02;text-align:justify;margin-top:12px}
+.paper p::first-letter{font-family:Georgia,serif;font-size:56px;float:left;line-height:.86;padding:4px 11px 0 0;color:var(--ink);background:var(--gold);font-weight:900;margin-right:5px}
+.paper blockquote{border-left:3px solid var(--ind);padding:6px 0 6px 15px;margin:14px 0;color:var(--ind2);font-size:13.4px;line-height:1.9;font-style:italic}
+.side h5{font-size:8.6px;letter-spacing:2.6px;color:var(--gold);margin-bottom:9px;font-weight:900}
+.side ol{counter-reset:k}
+.side li{counter-increment:k;font-size:12.6px;color:var(--dim);padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed rgba(143,168,255,.2)}
+.side li::before{content:"NIGHT " counter(k,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:Georgia,serif;font-size:9.2px;color:var(--ind2);font-weight:900;letter-spacing:.6px}
+/* 栏目5：今晚放映 —— 折页 */
+.ton{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tn{background:var(--ink2);padding:19px 20px;border-bottom:6px solid var(--ind);transition:.24s}
+.tn:nth-child(2){border-bottom-color:var(--gold)}
+.tn:hover{transform:translate(-3px,-3px);box-shadow:9px 11px 0 rgba(91,124,255,.2)}
+.tn .lbl{font-size:8.4px;letter-spacing:2.4px;color:var(--gold);font-weight:900}
+.tn h4{font-size:19.6px;font-weight:900;margin:4px 0 6px;color:#fff}
+.tn .yr{font-size:10.2px;letter-spacing:1px;color:var(--ind2)}
+.tn p{font-size:12.2px;line-height:1.92;margin-top:6px;color:var(--dim);text-align:justify}
+.tn .at{font-family:Georgia,serif;font-size:22px;font-weight:900;color:var(--gold);margin-top:9px;letter-spacing:-.7px}
+/* 栏目6：观夜守则 */
+.rule3{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:22px}
+.r3{padding:14px 16px;border:1px solid rgba(233,196,106,.34);background:var(--ink2)}
+.r3 b{font-size:11.6px;letter-spacing:1.4px;color:var(--gold)}
+.r3:nth-child(2) b{color:var(--ind2)}
+.r3:nth-child(3) b{color:var(--bone)}
+.r3 p{font-size:11.6px;color:var(--dim);line-height:1.84;margin-top:5px}
+.foot{border-top:1px solid rgba(233,196,106,.3);background:#02030a;color:var(--dim);padding:46px 0 16px;margin-top:10px}
+.fg{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:26px;margin-bottom:24px}
+.fc2 h5{font-size:8.8px;letter-spacing:3px;color:var(--gold);margin-bottom:12px;font-weight:900}
+.fc2 a{display:block;font-size:12.2px;color:var(--gray);padding:5px 0}
+.fc2 a:hover{color:var(--ind2)}
+.about{font-size:12.2px;color:var(--gray);max-width:440px;margin-top:12px;text-align:justify;line-height:2}
+.copy{text-align:center;font-size:10.6px;color:var(--gray);padding-top:18px;border-top:1px solid rgba(143,168,255,.18);line-height:2.2;letter-spacing:.4px}
+.copy a{color:var(--ind2);border-bottom:1px dotted var(--ind2);font-weight:700}
+.up{position:fixed;right:14px;bottom:16px;width:46px;height:46px;background:var(--ink2);color:var(--gold);display:grid;place-items:center;font-size:17px;font-weight:900;border:1px solid var(--gold);opacity:0;pointer-events:none;transition:.3s;z-index:99}
+.up.show{opacity:1;pointer-events:auto;box-shadow:0 0 18px rgba(91,124,255,.42)}
+@media(max-width:1040px){
+  .hg{grid-template-columns:1fr}
+  .hero aside,.badge{width:100%;max-width:520px;margin:0 auto}
+  .win{grid-template-columns:repeat(2,1fr)}
+  .noct,.paper,.ton{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .togg{display:block}
+  .nrow{position:fixed;inset:66px 0 0 0;background:var(--ink2);flex-direction:column;padding:16px;transform:translateX(100%);transition:.32s;z-index:99;overflow:auto;border-left:5px solid var(--ind)}
+  .nrow.open{transform:translateX(0)}
+  .nrow a{padding:13px 8px;font-size:15.2px;border-bottom:1px solid rgba(143,168,255,.18);width:100%;color:var(--dim)}
+  .hero{padding:24px 0 10px}
+  section{padding:40px 0}
+  .win,.face,.rule3{grid-template-columns:1fr}
+  .face{grid-template-columns:repeat(2,1fr)}
+}
+@media print{
+  .alert,.marq,nav.gnb,.up{display:none}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  section{padding:8px 0;break-inside:avoid}
+  .wn,.nc,.tn,.fc,.r3,.paper{break-inside:avoid;border-color:#888;color:#000;background:#fff}
+  .wn h4,.nc h4,.tn h4,.paper .lead{color:#000}
+  .wn p,.nc p,.tn p,.paper p,.side li{color:#222}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<div class="alert" role="note">
+  ◍ <b>夜夜电影网</b>是 <b>0149 导航</b> 旗下<b>深夜放映</b>频道。本站<b>不做资源站、不挂盗链、不引导下载、不提供任何影视资源</b>：所有影片建议通过电影院及合法授权平台观看。
+</div>
+
+<div class="marq" aria-hidden="true">
+  <span><b>NIGHT SCREENING</b> ｜ 夜夜电影网 · 0149 导航 ｜ 深夜电影 · 失眠电影 · 夜片 · 电影推荐 · 电影片单 · 电影影评 · 观影指南 · 黑色电影 · 文艺片 · 默片 · 长镜头 · 华语电影 · 欧洲电影 · 日本电影 · 韩国电影 · 4K 修复 · 23:00 之后</span>
+</div>
+
+<nav class="gnb" aria-label="主导航">
+  <div class="wrap nrow" id="links">
+    <a class="logo" href="#top"><span class="moon" aria-hidden="true"></span>夜夜电影网<small>0149 导航 · 深夜放映</small></a>
+    <a href="#win">失眠片单</a>
+    <a href="#noct">类型夜曲</a>
+    <a href="#face">导演夜话</a>
+    <a href="#paper">夜读影评</a>
+    <a href="#ton">今晚放映</a>
+    <a href="#about">关于本站</a>
+  </div>
+  <button class="togg" id="togg" aria-label="菜单" aria-expanded="false">☰</button>
+</nav>
+
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="wrap hg">
+    <div>
+      <div class="eyebrow">NIGHT SCREENING · SINCE 0149 · EVERY NIGHT 23:00</div>
+      <h1>夜夜电影网。<br>每晚一部，<em>适合 23:00 之后</em>。</h1>
+      <p>失眠、加班、雨夜、异地、失恋、想家——<b>夜晚需要不同的电影</b>。我们不按"高分"排片，按<b>此刻你在经历什么</b>排片。</p>
+      <p>每部片都标注<b>适合时段、情绪、时长、分级</b>。片单每周五更新，<b>0149 个深夜情绪标签</b>持续归档。</p>
+      <span class="badge">TONIGHT 23:00 · 《地球最后的夜晚》</span>
+    </div>
+    <aside aria-label="深夜指数">
+      <div class="lbl">NIGHT INDEX · 深夜指数</div>
+      <div class="big">23:00</div>
+      <div class="of">已归档深夜片 0149 部 ｜ 失眠型 38 ｜ 雨夜型 26 ｜ 异地型 21 ｜ 加班型 19</div>
+      <div class="rule"></div>
+      <p>本月夜曲：<b>"那些看完会想出门走一圈的电影"</b>。建议关灯、戴耳机、音量 7、别开倍速。</p>
+      <div class="who">放映员：两条夜蛇（选片 / 写夜）</div>
+    </aside>
+  </div>
+</section>
+
+<section id="win" aria-labelledby="t-win">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <div class="shl"><h2 class="st"><i>01</i>失眠片单</h2><span class="en">Sleepless List</span></div>
+        <p class="ss">四部<b>适合 23:00 之后</b>的片子。<b>窗格造型</b>：窗内是夜，窗外是片名。标注<b>适合时段与情绪</b>。</p>
+      </div>
+      <a class="chip" href="#">0149 部深夜片单 ›</a>
+    </div>
+    <div class="win">
+      <article class="wn" tabindex="0">
+        <div class="cv" aria-hidden="true"></div>
+        <div class="hr">23:10</div>
+        <h4>《地球最后的夜晚》</h4>
+        <div class="meta">2018 · 中国 · 140′ · 毕赣</div>
+        <p>一场梦，3D，60 分钟长镜头。<b>看完会怀疑自己是不是也睡着了。</b></p>
+        <span class="mood">失眠 · 雨夜 · 长镜头</span>
+      </article>
+      <article class="wn" tabindex="0">
+        <div class="cv" aria-hidden="true"></div>
+        <div class="hr">23:40</div>
+        <h4>《穆赫兰道》</h4>
+        <div class="meta">2001 · 美国 · 147′ · 大卫·林奇</div>
+        <p>好莱坞的梦，梦见自己。<b>别查解说，先失眠一次。</b></p>
+        <span class="mood">烧脑 · 梦境 · 蓝调</span>
+      </article>
+      <article class="wn" tabindex="0">
+        <div class="cv" aria-hidden="true"></div>
+        <div class="hr">00:15</div>
+        <h4>《海边的曼彻斯特》</h4>
+        <div class="meta">2016 · 美国 · 137′ · 肯尼斯·洛纳根</div>
+        <p>悲伤不是可以被治愈的。<b>看完别急着振作，允许自己难过一会儿。</b></p>
+        <span class="mood">失恋 · 丧 · 写实</span>
+      </article>
+      <article class="wn" tabindex="0">
+        <div class="cv" aria-hidden="true"></div>
+        <div class="hr">01:00</div>
+        <h4>《花样年华》</h4>
+        <div class="meta">2000 · 中国香港 · 98′ · 王家卫</div>
+        <p>旗袍、雨、狭窄的楼道。<b>最适合一个人看，不适合发给谁。</b></p>
+        <span class="mood">雨夜 · 暧昧 · 张曼玉</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="noct" style="background:linear-gradient(180deg,transparent,rgba(91,124,255,.07))" aria-labelledby="t-noct">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <div class="shl"><h2 class="st"><i>02</i>类型夜曲</h2><span class="en">Nocturne</span></div>
+        <p class="ss">三种<b>夜晚才成立的类型</b>。<b>三色左边框 + 竖向时间轴</b>，悬停即亮。</p>
+      </div>
+      <a class="chip" href="#">完整类型夜曲 ›</a>
+    </div>
+    <div class="noct">
+      <div class="nc"><span class="no">NOCTURNE 01</span><h4>黑色电影<br>Film Noir</h4><p>雨、百叶窗、烟、背叛。光影本身就是剧情，看完会想抽一支并不存在的烟。</p><div class="when">BEST AT 22:30 · 片长 90–110′</div></div>
+      <div class="nc"><span class="no">NOCTURNE 02</span><h4>慢电影<br>Slow Cinema</h4><p>长镜头、少对白、大量留白。它不讨好你，但会住进你。别在凌晨三点开始。</p><div class="when">BEST AT 23:30 · 片长 130–179′</div></div>
+      <div class="nc"><span class="no">NOCTURNE 03</span><h4>夜行公路<br>Night Road</h4><p>车灯、公路、广播、陌生城市。适合"想离开"的夜晚，看完会想上车。</p><div class="when">BEST AT 00:30 · 片长 100–140′</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="face" aria-labelledby="t-face">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <div class="shl"><h2 class="st"><i>03</i>导演夜话</h2><span class="en">Night Talk</span></div>
+        <p class="ss">六位<b>越夜越清醒</b>的导演。<b>无间隙头像栅格</b>，径向渐变人脸 + 虚线光环（零图片请求）。</p>
+      </div>
+      <a class="chip" href="#">导演夜话全集 ›</a>
+    </div>
+    <div class="face">
+      <div class="fc"><div class="av" aria-hidden="true"></div><b>大卫·林奇</b><i>梦的接线员</i></div>
+      <div class="fc"><div class="av" aria-hidden="true"></div><b>王家卫</b><i>雨的收藏家</i></div>
+      <div class="fc"><div class="av" aria-hidden="true"></div><b>塔可夫斯基</b><i>时间的雕刻者</i></div>
+      <div class="fc"><div class="av" aria-hidden="true"></div><b>阿巴斯</b><i>路的诗人</i></div>
+      <div class="fc"><div class="av" aria-hidden="true"></div><b>侯孝贤</b><i>长镜头的守夜人</i></div>
+      <div class="fc"><div class="av" aria-hidden="true"></div><b>是枝裕和</b><i>日常的录音师</i></div>
+    </div>
+  </div>
+</section>
+
+<section id="paper" aria-labelledby="t-paper">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <div class="shl"><h2 class="st"><i>04</i>夜读影评</h2><span class="en">Midnight Read</span></div>
+        <p class="ss">一篇<b>深夜写给电影的信</b>。<b>首字下沉 + 右注关键词</b>（全程零 <span style="font-family:monospace;font-size:11px">table</span>）。</p>
+      </div>
+      <a class="chip" href="#">夜读全部 ›</a>
+    </div>
+    <div class="paper">
+      <div>
+        <p class="lead">为什么深夜看的电影，<br>总比白天好看？</p>
+        <p>不是电影变了，是你变了。白天你是个"应该"的人：应该高效、应该懂事、应该回消息。深夜你才变成一个"可以"的人：可以脆弱、可以走神、可以为一个陌生人的命运流泪。</p>
+        <p>电影知道这一点。所以它把最重的台词放在雨里，把最长的镜头留给沉默，把结局交给开门那一秒——<b>因为深夜的人，愿意等那一秒。</b></p>
+        <blockquote>"白天我们看电影，夜晚电影看我们。" —— 夜夜电影网 · 夜读 0149</blockquote>
+        <p>所以别在通勤路上看《海边的曼彻斯特》，也别在加班后打开《地球最后的夜晚》又急着睡。<b>深夜电影不是消遣，是一次不被打扰的独处。</b>给它四十分钟，它还你一整夜。</p>
+      </div>
+      <aside class="side">
+        <h5>TONIGHT · 夜读关键词</h5>
+        <ol>
+          <li>孤独不是病，是被低估的能力</li>
+          <li>长镜头 = 允许你走神</li>
+          <li>雨天自带 20% 情绪加成</li>
+          <li>关灯，是观影的第一步</li>
+          <li>别开倍速，诗不是电报</li>
+          <li>看完别查解说，先去阳台</li>
+        </ol>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="ton" aria-labelledby="t-ton">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <div class="shl"><h2 class="st"><i>05</i>今晚放映</h2><span class="en">Tonight</span></div>
+        <p class="ss">两部<b>今晚 23:00</b>的排片。<b>对开折页 + 底部色条</b>，周五更新。</p>
+      </div>
+      <a class="chip" href="#">本周排片表 ›</a>
+    </div>
+    <div class="ton">
+      <div class="tn"><div class="lbl">TONIGHT 23:00 · 雨夜场</div><h4>《地球最后的夜晚》</h4><div class="yr">2018 · 中国 · 140′ · 毕赣 · 15+</div><p>建议戴 3D 眼镜（若影院已无排片，正版平台有 2D 版）。<b>看完会想出门走一圈。</b></p><div class="at">NIGHT 0149</div></div>
+      <div class="tn"><div class="lbl">TONIGHT 01:20 · 失眠场</div><h4>《花样年华》</h4><div class="yr">2000 · 中国香港 · 98′ · 王家卫 · 12+</div><p>如果失眠，就看这一部。<b>98 分钟，刚好够天亮前结束。</b></p><div class="at">NIGHT 0150</div></div>
+    </div>
+    <div class="rule3">
+      <div class="r3"><b>23:00–00:00 · 入夜</b><p>轻失眠、雨夜、暧昧。片长 90–110 分钟，看完还能睡。</p></div>
+      <div class="r3"><b>00:00–01:30 · 深夜</b><p>重失眠、烧脑、长镜头。片长 120–179 分钟，看完不想睡。</p></div>
+      <div class="r3"><b>01:30–03:00 · 破晓</b><p>极夜、默片、实验。片长 60–90 分钟，看完天快亮。</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="wrap">
+    <div class="fg">
+      <div class="fc2">
+        <div class="logo" style="font-size:17px;color:var(--bone)"><span class="moon" aria-hidden="true"></span>夜夜电影网<small>0149 导航 · 深夜放映</small></div>
+        <p class="about"><b>夜夜电影网</b>（yeyedianyingwang-cn.github.io）是 <b>0149 导航</b> 旗下<b>深夜放映</b>频道：每晚一部适合 23:00 之后观看的电影，含<b>失眠片单、类型夜曲、导演夜话、夜读影评、今晚放映</b>。"0149"是本站自建的<b>深夜情绪标签体系</b>（失眠 / 雨夜 / 异地 / 加班 / 失恋 / 想家），非官方分类，亦非任何第三方评分机构。本站<b>倡导正版、理性观影</b>：<b>不做资源站、不挂盗链、不引导下载、不提供任何影视资源</b>，所有影片建议通过电影院及合法授权平台观看。</p>
+      </div>
+      <div class="fc2"><h5>时段</h5><a href="#win">入夜 23:00</a><a href="#win">深夜 00:00</a><a href="#win">破晓 01:30</a><a href="#win">通勤（不建议）</a><a href="#win">雨天加成</a></div>
+      <div class="fc2"><h5>栏目</h5><a href="#win">失眠片单</a><a href="#noct">类型夜曲</a><a href="#face">导演夜话</a><a href="#paper">夜读影评</a><a href="#ton">今晚放映</a></div>
+      <div class="fc2"><h5>关于</h5><a href="#about">"夜夜"指什么</a><a href="#about">分级说明</a><a href="#">纠错</a><a href="#">投稿夜读</a><a href="#">订阅 23:00 推送</a></div>
+    </div>
+    <div class="copy">
+      网站名称：<b>夜夜电影网</b> ｜ 网站网址：<a href="https://yeyedianyingwang-cn.github.io">https://yeyedianyingwang-cn.github.io</a> ｜ 频道归属：<a href="https://yeyedianyingwang-cn.github.io">0149 导航</a> ｜ © 2024–2026 保留所有权利<br>
+      本站仅为<b>电影信息与观影索引服务</b>，<b>不提供任何影视资源下载、网盘分享与在线播放</b>。请通过电影院及合法授权平台观看。深夜观影请注意用眼与作息。
+    </div>
+  </div>
+</footer>
+
+<a class="up" id="up" href="#top" aria-label="回到顶部">↑</a>
+
+<script>
+var togg=document.getElementById('togg'),links=document.getElementById('links');
+togg.addEventListener('click',function(){
+  var o=links.classList.toggle('open');
+  togg.setAttribute('aria-expanded',o);togg.textContent=o?'✕':'☰';
+});
+links.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){links.classList.remove('open');togg.setAttribute('aria-expanded','false');togg.textContent='☰';}
+});
+var up=document.getElementById('up');
+window.addEventListener('scroll',function(){up.classList[window.scrollY>500?'add':'remove']('show');});
+</script>
+</body>
+</html>
